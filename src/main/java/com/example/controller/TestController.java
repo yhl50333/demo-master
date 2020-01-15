@@ -30,7 +30,7 @@ public class TestController {
     @RequestMapping("1")
     public String c(){
     System.out.println(22);
-        return "myPage";
+        return "starter";
     }
     @Autowired
     UserService sd;
@@ -111,6 +111,7 @@ public class TestController {
 
         return "myPage";
     }
+
 
 
 }
