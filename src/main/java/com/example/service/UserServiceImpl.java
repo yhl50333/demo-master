@@ -31,5 +31,10 @@ public  class UserServiceImpl implements UserService {
         return userMapper.queryuserinfo(uid);
     }
 
+    @Override
+    public String findPageObjects(String username, Integer pageCurrent) {
+        return null;
+    }
+
 }
 

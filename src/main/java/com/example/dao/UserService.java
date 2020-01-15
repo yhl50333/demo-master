@@ -6,7 +6,9 @@ import com.example.entity.UserInfo;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+@ResponseBody
 public interface UserService {
     User getByName(String username);
 
@@ -14,4 +16,7 @@ public interface UserService {
     User querybyname(String phone);
 
     UserInfo queryuserinfo(int uid);
+
+    String findPageObjects(String username, Integer pageCurrent);
+    
 }

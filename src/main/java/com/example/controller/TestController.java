@@ -3,7 +3,6 @@ package com.example.controller;
 
 import com.example.dao.UserService;
 import com.example.entity.*;
-import com.sun.org.apache.bcel.internal.generic.RETURN;
 import org.apache.ibatis.annotations.Param;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
@@ -31,6 +30,11 @@ public class TestController {
     public String c(){
     System.out.println(22);
         return "starter";
+    }
+    @RequestMapping("3")
+    public String b(){
+        System.out.println(22);
+        return "list";
     }
     @Autowired
     UserService sd;

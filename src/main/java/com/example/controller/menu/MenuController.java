@@ -5,11 +5,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/menu")
+@RequestMapping("/")
 public class MenuController {
     @RequestMapping("doMenuListUI")
     public String doMenuListUI(){
-        return "sys/menu_list";
+        return "sys/menu";
     }
 
 }

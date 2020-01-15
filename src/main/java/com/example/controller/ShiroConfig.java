@@ -154,6 +154,7 @@ public class ShiroConfig {
         linkedHashMap.put("/bower_components/**", "anon");//不需要验证
         linkedHashMap.put("/plugins/**", "anon");//不需要验证
         linkedHashMap.put("/dist/**", "anon");//不需要验证
+        linkedHashMap.put("/sys/**", "anon");
         linkedHashMap.put("/**", "user");//需要进行权限验证
         bean.setFilterChainDefinitionMap(linkedHashMap);
         return bean;
