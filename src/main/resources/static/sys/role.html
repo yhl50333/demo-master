@@ -48,7 +48,7 @@
 </div>
 <script type="text/javascript">
    $(function(){
-	  $("#pageId").load("doPageUI.do",function(){
+	  $("#pageId").load("doPageUI",function(){
 		  doGetObjects();
 	  });
 	  $(".input-group-btn")
@@ -69,7 +69,7 @@
 		   title="修改角色"
 		   var id=$(this).parents("tr").data("id");
 		   var params={"id":id};
-		   var url="role/doFindObjectById.do";
+		   var url="/doroleFindObjectById";
 		   $.getJSON(url,params,function(result){
 			   if(result.state==1){
 				  result.data.id=id;//在结果中动态追加id
@@ -124,7 +124,7 @@
 	   var name=$("#searchNameId").val();
 	   if(name)params.name=name;
 	   //2.url
-	   var url="role/doFindPageObjects.do";
+	   var url="/doroleFindPageObjects";
 	   //3.ajax request
 	   console.log(params);
 	   $.getJSON(url,params,function(result){

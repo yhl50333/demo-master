@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.mapper.KehMapper">
+<mapper namespace="com.example.mapper.SysRoleMapper">
 
 
-
-    <resultMap id="BaseResultMap" type="com.example.entity.Keh">
-        <result column="id" jdbcType="INTEGER" property="id" />
-        <result column="name" jdbcType="VARCHAR" property="name" />
-        <result column="costom" jdbcType="VARCHAR" property="costom" />
-        <result column="moblie" jdbcType="VARCHAR" property="moblie" />
-        <result column="DB" jdbcType="VARCHAR" property="DB" />
-    </resultMap>
-
-    <select id="Sel" resultType="com.example.entity.Keh">
-        select * from Keh where id = #{id}
+    <select id="findPageObjects" resultType="com.example.entity.SysRole" >
+     select top (cast(#{pageSize} as int)) * from sys_roles where id not in(select top (cast(#{startIndex} as int)) id from sys_roles where id IN(select  id from sys_roles where  name like #{c})) and  name like #{c}
     </select>
+    <select id="getRowCount" resultType="int">
+        select count(*) from sys_roles where name like  #{c}
+    </select>
+
 
 </mapper>

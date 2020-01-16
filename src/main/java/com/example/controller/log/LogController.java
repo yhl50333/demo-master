@@ -20,17 +20,7 @@ public class LogController {
 
         return  "sys/list";
     }
-    @RequestMapping("/list")
-    public String c(){
-System.out.println(2);
-    return "list";
-    }
-    @RequestMapping("doFindPageObjects")
-    @ResponseBody
-    public JsonResult doFindPageObjects(
-            String username,Integer pageCurrent) {
-        return new JsonResult(
-                sysUserService.findPageObjects(username, pageCurrent));
-    }
+
+
 
 }

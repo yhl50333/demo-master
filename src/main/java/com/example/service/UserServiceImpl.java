@@ -1,6 +1,7 @@
 package com.example.service;
 
 import com.example.dao.UserService;
+import com.example.entity.Role;
 import com.example.entity.User;
 import com.example.entity.UserInfo;
 import com.example.mapper.UserMapper;
