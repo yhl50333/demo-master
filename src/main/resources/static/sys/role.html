@@ -82,7 +82,7 @@
 	   }
    }
    function doLoadPageUI(title){
-	   var url="role/doRoleEditUI.do"
+	   var url="role/doRoleEditUI"
 	   $("#mainContentId")
 	   .load(url,function(){
 		   $(".box-title").html(title);
@@ -132,7 +132,7 @@
 	   });
    }
    function doHandleResponseResult(result){
-	   
+
 	   if(result.state==1){
 		  doSetTableBodyRows(result.data.records);
 		  doSetPagination(result.data);
